@@ -17,7 +17,7 @@ $ ./ollama_twice.sh A pipe1 pipe2
 
 On terminal B
 
-$ ./ollama_twice.sh A pipe2 pipe1
+$ ./ollama_twice.sh B pipe2 pipe1
 
 On terminal C - start the conversation
 
