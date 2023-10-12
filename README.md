@@ -1,6 +1,18 @@
 # ollama-twice
 Watch and hear endless conversations between two ollamas, hence the Two-Way Conversation Engine (TWICE)
 
+Ever wondered what an endless dialogue between two AI chatbots would sound like? Well, now you can not only witness it but also listen to their ongoing banter, thanks to the Two-Way Conversation Engine (TWICE).
+
+Introducing ollama_twice.sh - A minimalist yet captivating setup where two bots, let's call them Ollama A and Ollama B, engage in eternal conversation.
+
+Technical Highlights:
+
+    Simplicity: Crafted with almost pure Bash scripting, keeping it lightweight and easy to grasp.
+    Vocal: Uses espeak to vocalize the bots' conversation, allowing you to hear their exchange.
+    Visual: Concurrently prints the conversation, ensuring you don’t miss out on the witty back-and-forths.
+
+Have fun!
+
 ### ollama_twice.sh
 
 - Built with:   Almost pure Bash
