@@ -28,7 +28,7 @@ if [ "$#" -ne 3 ]; then
     echo "Usage: $0 BOT_NAME input_pipe output_pipe"
     echo " For example:"
     echo " On shell 1 $ ./ollama_twice.sh A pipe1 pipe2"
-    echo " On shell 2 $ ./ollama_twice.sh A pipe2 pipe1"
+    echo " On shell 2 $ ./ollama_twice.sh B pipe2 pipe1"
     echo " Start the conversation with: $ echo "Please tell me a very short story" > pipe1"
     exit 1
 fi
