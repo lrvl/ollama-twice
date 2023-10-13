@@ -1,7 +1,7 @@
 # ollama-twice
 Watch and hear endless conversations between two ollamas, hence the Two-Way Conversation Engine (TWICE)
 
-Ever wondered what an endless dialogue between two AI chatbots would sound like? Well, now you can not only witness it but also listen to their ongoing banter, thanks to the Two-Way Conversation Engine (TWICE).
+Ever wondered what an endless dialogue between two AI chatbots would sound like? Well, now you can not only witness it but also listen to their ongoing banter.
 
 Introducing ollama_twice.sh - A minimalist yet captivating setup where two bots, let's call them Ollama A and Ollama B, engage in eternal conversation.
 
@@ -25,11 +25,11 @@ $ mkfifo pipe1 pipe2
 
 On terminal A
 
-$ ./ollama_twice.sh A pipe1 pipe2
+$ ./ollama_twice.sh A pipe1 pipe2 <name of ollama model to use>
 
 On terminal B
 
-$ ./ollama_twice.sh B pipe2 pipe1
+$ ./ollama_twice.sh B pipe2 pipe1 <name of ollama model to use>
 
 On terminal C - start the conversation
 
