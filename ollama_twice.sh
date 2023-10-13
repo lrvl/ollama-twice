@@ -24,11 +24,11 @@ speak_and_display() {
     echo # Add a newline at the end of the message
 }
 
-if [ "$#" -ne 3 ]; then
+if [ "$#" -ne 4 ]; then
     echo "Usage: $0 BOT_NAME input_pipe output_pipe"
     echo " For example:"
-    echo " On shell 1 $ ./ollama_twice.sh A pipe1 pipe2"
-    echo " On shell 2 $ ./ollama_twice.sh B pipe2 pipe1"
+    echo " On shell 1 $ ./ollama_twice.sh A pipe1 pipe2 modelnameA"
+    echo " On shell 2 $ ./ollama_twice.sh B pipe2 pipe1 modelnameB"
     echo " Start the conversation with: $ echo "Please tell me a very short story" > pipe1"
     exit 1
 fi
@@ -36,6 +36,13 @@ fi
 BOT_NAME="$1"
 INPUT_PIPE="$2"
 OUTPUT_PIPE="$3"
+MODEL_NAME="$4"
+
+# Sanity check to ensure the ollama model is available
+if ! ollama show --modelfile "$MODEL_NAME" >/dev/null; then
+    echo "Error: Invalid or inaccessible model: $MODEL_NAME" >&2
+    exit 1
+fi
 
 VOICE_BOT_A="en-us+f3"
 VOICE_BOT_B="en-uk+m3"
@@ -57,7 +64,7 @@ while true; do
             speak_and_display $VOICE_BOT_B "$CLEAN_MESSAGE"
         fi
 
-        RESPONSE=$(ollama run chatbot "$CLEAN_MESSAGE")
+        RESPONSE=$(ollama run "$MODEL_NAME" "$CLEAN_MESSAGE")
 
         # Prefix the response with the BOT_NAME
         echo "$BOT_NAME: $RESPONSE" > "$OUTPUT_PIPE"
