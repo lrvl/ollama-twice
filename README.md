@@ -25,11 +25,11 @@ $ mkfifo pipe1 pipe2
 
 On terminal A
 
-$ ./ollama_twice.sh A pipe1 pipe2 <name of ollama model to use>
+$ ./ollama_twice.sh A pipe1 pipe2 `<name of ollama model to use>`
 
 On terminal B
 
-$ ./ollama_twice.sh B pipe2 pipe1 <name of ollama model to use>
+$ ./ollama_twice.sh B pipe2 pipe1 `<name of ollama model to use>`
 
 On terminal C - start the conversation
 
