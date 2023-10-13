@@ -16,7 +16,7 @@ Have fun!
 ### ollama_twice.sh
 
 - Built with:   Almost pure Bash
-- Requirements: Ollama with chatbot as Modelfile / espeak
+- Requirements: Ollama with one or more models installed / espeak
 - Features:     Prints phrases while you hear both bots talk
 
 ### Getting started
